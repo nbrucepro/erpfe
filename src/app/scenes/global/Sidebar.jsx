@@ -31,7 +31,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       icon={icon}
     >
       <Typography>{title}</Typography>
-      <Link href={to} />
+      <Link href={'/'} />
     </MenuItem>
   );
 };
