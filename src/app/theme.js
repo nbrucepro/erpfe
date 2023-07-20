@@ -1,4 +1,3 @@
-"use client";
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
 
@@ -200,7 +199,7 @@ export const ColorModeContext = createContext({
 });
 
 export const useMode = () => {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
 
   const colorMode = useMemo(
     () => ({
