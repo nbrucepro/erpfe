@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
  const nextConfig = {
-  basePath: "/dashboard"
+  basePath: ""
 }
 
 export default nextConfig

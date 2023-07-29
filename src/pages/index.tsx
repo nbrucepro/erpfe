@@ -10,6 +10,7 @@ import { gradientBgPurplePink } from '../colors'
 import { appTitle } from '../config'
 import { useAppDispatch } from '../stores/hooks'
 import { setDarkMode, setStyle } from '../stores/styleSlice'
+import Link from 'next/link'
 
 const StyleSelect = () => {
   const dispatch = useAppDispatch()
@@ -40,7 +41,7 @@ const StyleSelect = () => {
           </h1>
           <h2 className="text-xl md:text-xl text-center text-white mb-12">
             Your all in one system{' '}
-            <code className="px-1.5 py-0.5 rounded bg-white bg-opacity-20"></code>
+            <code className="px-1.5 py-0.5 rounded bg-white bg-opacity-20"><Link href="/dashboard">Go to dashboard</Link></code>
           </h2>
         </SectionMain>
       </div>
