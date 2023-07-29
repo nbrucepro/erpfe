@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
  const nextConfig = {
-  basePath: "",
+  basePath: "/dashboard",
   async redirects() {
     return [
       {
@@ -12,15 +12,6 @@
           permanent: false
       }
     ]
-  },
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'static.justboil.me',
-      },
-    ],
   },
 }
 

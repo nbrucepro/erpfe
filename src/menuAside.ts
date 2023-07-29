@@ -16,12 +16,12 @@ import { MenuAsideItem } from './interfaces'
 
 const menuAside: MenuAsideItem[] = [
   {
-    href: '/dashboard',
+    // href: '/dashboard',
     icon: mdiMonitor,
     label: 'Dashboard',
   },
   {
-    href: '/tables',
+    // href: '/tables',
     label: 'Users',
     icon: mdiTable,
   },
