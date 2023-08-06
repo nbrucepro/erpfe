@@ -10,19 +10,23 @@ export default function FooterBar({ children }: Props) {
   const year = new Date().getFullYear()
 
   return (
-    <footer className={`py-1 relative px-4 bottom ${containerMaxW}`}>
-      <div className="block md:flex items-center justify-between">
-        <div className="text-center md:text-left mb-6 md:mb-0">
-          <b>
-            &copy;{year},{` `}
-            <a href="'./'" rel="noreferrer" target="_blank">
-              ERP.co
-            </a>
-            .
-          </b>
-          {` `}
-        </div>
-      </div>
-    </footer>
+    <>
+  <footer className={`relative max-w-6xl mx-auto bottom-0 left-0 w-full ${containerMaxW} flex flex-col items-center`}>
+  <div className="flex-grow"></div> {/* This will push the content to the bottom */}
+  <div className="block md:flex items-center justify-between">
+    <div className="text-center md:text-left mb-6 md:mb-0">
+      <b>
+        &copy;{year},{` `}
+        <a href="'./'" rel="noreferrer" target="_blank">
+          ERP.co
+        </a>
+        .
+      </b>
+      {` `}
+    </div>
+  </div>
+</footer>
+
+    </>
   )
 }
