@@ -78,7 +78,7 @@ const InvoiceTemplate = () => {
                             <tbody>
                                 <tr>
                                     <td className="p-5 ps-0 text-base font-normal text-start text-slate-900">Acoosnt Nex <span className="font-semibold">123 456 78</span></td>
-                                    <td row-span="2" className="p-5 text-2xl font-medium text-slate-900">18 May '16</td>
+                                    <td row-span="2" className="p-5 text-2xl font-medium text-slate-900">18 May 16</td>
                                     <td row-span="2" className="p-5 pe-0 text-2xl font-medium text-end text-orange-600">$2468.00</td>
                                 </tr>
                                 <tr className="p-5 ps-0 border-gray-300">

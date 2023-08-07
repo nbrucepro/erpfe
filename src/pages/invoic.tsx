@@ -1,9 +1,9 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'
-import arrowDown from '../assets/icon-arrow-down.svg'
+// import arrowDown from '../assets/icon-arrow-down.svg'
 import plus from '../assets/plus.png'
 import InvoiceCard from './InvoiceCard'
-import { useDispatch, useSelector } from 'react-redux'
+// import { useDispatch, useSelector } from 'react-redux'
 // import invoiceSlice from '../redux/invoiceSlice'
 // import CreateInvoice from './CreateInvoice'
 // import { useLocation } from 'react-router-dom'
@@ -15,11 +15,11 @@ function Center() {
     // const location = useLocation()
     const controls = useAnimation();
     // const dispatch = useDispatch()
-    const filter = ['paid', 'pending', 'draft']
+    // const filter = ['paid', 'pending', 'draft']
     const [isDropdown, setIsDropdown] = useState(false)
     const [openCreateInvoice, setOpenCreateInvoice] = useState(false)
 
-    const [filterValue, setfilterValue] = useState('')
+    // const [filterValue, setfilterValue] = useState('')
 
     // const invoices = useSelector((state) => state.invoices.filteredInvoice)
     const invoices = data;
@@ -45,17 +45,16 @@ function Center() {
         stiffness: 200,
     };
 
-    const varients = {
-        open: { opacity: 1, x: -20, duration: 200, transition },
-        close: { opacity: 0, x: -100, duration: 500, transition }
-    }
+    // const varients = {
+    //     open: { opacity: 1, x: -20, duration: 200, transition },
+    //     close: { opacity: 0, x: -100, duration: 500, transition }
+    // }
 
 
 
     return (
         <div>
-            <div className='dark:bg-[#141625] scrollbar-hide duration-300 min-h-screen bg-[#f8f8fb] py-[34px] px-2 md:px-8 lg:px-12 lg:py-[72px]  '>
-
+            <div className='dark:bg-[#141625] scrollbar-hide duration-300 min-h-screen bg-[#f8f8fb] py-[34px] px-2 md:px-8 lg:px-12 lg:py-[72px]'>
                 <motion.div
                     // key={location.pathname}
                     initial={{ x: '0' }}
@@ -71,8 +70,8 @@ function Center() {
                             <p className=' text-gray-500 font-light'>There are {invoices.length} total invoices.</p>
                         </div>
 
-                        <div className=' flex  max-h-full  items-center '>
-                            <div className=' flex items-center'>
+                        <div className='flex  max-h-full items-center'>
+                            <div className='flex items-center'>
                                 <p className=' hidden md:block dark:text-white font-medium'>
                                     Filter by status
                                 </p>
@@ -88,7 +87,7 @@ function Center() {
                                     }
                                 </div>
                             </div>
-                            {isDropdown &&
+                            {/* {isDropdown &&
                                 <motion.div as='select' variants={varients} animate={
                                     isDropdown ? "open" : "close"
                                 } className='  w-40 bg-white dark:bg-[#1E2139] dark:text-white flex px-6 py-4 flex-col  top-[160px] lg:top-[120px]  absolute  shadow-2xl rounded-xl space-y-2    '>
@@ -100,10 +99,10 @@ function Center() {
                                             </p>
                                         </div>
                                     ))}
-                                </motion.div>}
+                                </motion.div>} */}
 
                             <button onClick={() => setOpenCreateInvoice(true)} className=' hover:opacity-80 ml-4 md:ml-10 flex items-center py-2 px-2 md:space-x-3 space-x-2 bg-[#7c5dfa] rounded-full'>
-                                <img src={plus} alt="" />
+                                <Image src={plus} alt="image" />
                                 <p className=' md:block hidden text-white font-semibold text-lg'>New invoice</p>
                                 <p className=' md:hidden block text-white font-semibold text-base'>New</p>
                             </button>
@@ -134,9 +133,9 @@ function Center() {
 
             </div>
             <AnimatePresence>
-                {openCreateInvoice &&
+                {/* {openCreateInvoice &&
                     <CreateInvoice openCreateInvoice={openCreateInvoice} setOpenCreateInvoice={setOpenCreateInvoice} />
-                }
+                } */}
             </AnimatePresence>
         </div>
     )
