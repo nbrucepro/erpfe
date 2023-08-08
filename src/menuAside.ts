@@ -26,8 +26,8 @@ const menuAside: MenuAsideItem[] = [
     label:'Invoice'
   },
   {
-    // href: '/tables',
-    label: 'Users',
+    href: '/employees',
+    label: 'Employees',
     icon: mdiTable,
   },
   // {
@@ -54,6 +54,14 @@ const menuAside: MenuAsideItem[] = [
     // href: '/dashboard',
     label: 'Profile',
     icon: mdiAccountCircle,
+    menu: [
+      {
+        label: 'Edit',
+      },
+      {
+        label: 'Settings',
+      },
+    ]
   },
   // {
   //   href: '/login',
@@ -64,18 +72,12 @@ const menuAside: MenuAsideItem[] = [
     // href: '/dashboard',
     label: 'Feedbacks',
     icon: mdiAlertCircle,
+
   },
   {
+    href:'/payroll',
     label: 'Payroll',
     icon: mdiViewList,
-    menu: [
-      {
-        label: 'Taxes',
-      },
-      {
-        label: 'Allowances',
-      },
-    ],
   },
   // {
   //   href: 'https://github.com/justboil/admin-one-react-tailwind',

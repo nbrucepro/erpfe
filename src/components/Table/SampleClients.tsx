@@ -62,7 +62,7 @@ const TableSampleClients = () => {
         <p>This is sample modal</p>
       </CardBoxModal>
 
-      <table className="hidden">
+      <table className='w-100'>
         <thead>
           <tr>
             <th />
@@ -71,6 +71,7 @@ const TableSampleClients = () => {
             <th>City</th>
             <th>Progress</th>
             <th>Created</th>
+            <th>Actions</th>
             <th />
           </tr>
         </thead>
