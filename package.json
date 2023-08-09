@@ -9,7 +9,12 @@
     "format": "prettier 'src/**/*.{tsx,ts,js}' --write"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@mdi/js": "^7.0.96",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.5",
+    "@mui/x-data-grid": "^5.17.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@syncfusion/ej2-react-grids": "^22.2.8",
     "chart.js": "^3.9.1",
