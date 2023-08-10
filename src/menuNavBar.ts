@@ -62,26 +62,23 @@ const menuNavBar: MenuNavBarItem[] = [
       },
     ],
   },
+  // {
+  //   // icon: mdiThemeLightDark,
+  //   icon: mdiMoonWaxingCrescent,
+  //   label: 'Light/Dark',
+  //   isDesktopNoLabel: true,
+  //   isToggleLightDark: true,
+  // },
   {
-    // icon: mdiThemeLightDark,
-    icon: mdiMoonWaxingCrescent,
-    label: 'Light/Dark',
+    icon: mdiCogOutline,
     isDesktopNoLabel: true,
-    isToggleLightDark: true,
+    label: 'Settings',
   },
+  
   {
-    icon: mdiGithub,
-    label: 'GitHub',
+    icon: mdiEmail,
     isDesktopNoLabel: true,
-    href: '',
-    target: '_blank',
-  },
-  {
-    icon: mdiVuejs,
-    label: 'Vue version',
-    isDesktopNoLabel: true,
-    href: '',
-    target: '_blank',
+    label: 'Messages',
   },
   {
     icon: mdiLogout,

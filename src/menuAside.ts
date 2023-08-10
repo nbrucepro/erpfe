@@ -30,27 +30,12 @@ const menuAside: MenuAsideItem[] = [
     label: 'Employees',
     icon: mdiTable,
   },
-  // {
-  //   href: '/forms',
-  //   label: 'Forms',
-  //   icon: mdiSquareEditOutline,
-  // },
   {
-    // href: '/dashboard',
-    label: 'Sales',
-    icon: mdiTelevisionGuide,
+    href:'/payroll',
+    label: 'Payroll',
+    icon: mdiViewList,
   },
-  {
-    // href: '/dashboard',
-    label: 'calendar',
-    icon: mdiResponsive,
-  },
-  // {
-  //   href: '/',
-  //   label: 'Styles',
-  //   icon: mdiPalette,
-  // },
-  {
+   {
     // href: '/dashboard',
     label: 'Profile',
     icon: mdiAccountCircle,
@@ -67,29 +52,6 @@ const menuAside: MenuAsideItem[] = [
   //   href: '/login',
   //   label: 'Login',
   //   icon: mdiLock,
-  // },
-  {
-    // href: '/dashboard',
-    label: 'Feedbacks',
-    icon: mdiAlertCircle,
-
-  },
-  {
-    href:'/payroll',
-    label: 'Payroll',
-    icon: mdiViewList,
-  },
-  // {
-  //   href: 'https://github.com/justboil/admin-one-react-tailwind',
-  //   label: 'GitHub',
-  //   icon: mdiGithub,
-  //   target: '_blank',
-  // },
-  // {
-  //   href: 'https://github.com/justboil/admin-one-vue-tailwind',
-  //   label: 'Vue version',
-  //   icon: mdiVuejs,
-  //   target: '_blank',
   // },
 ]
 
