@@ -6,6 +6,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { store } from '../stores/store'
 import { Provider } from 'react-redux'
+import StateContext from '../context/stateContext'
 import '../css/main.css'
 
 export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<P, IP> & {
@@ -71,8 +72,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
               gtag('config', 'UA-130795909-1');
             `}
           </Script>
-
+          <StateContext>
           <Component {...pageProps} />
+          </StateContext>
         </>
       )}
     </Provider>
