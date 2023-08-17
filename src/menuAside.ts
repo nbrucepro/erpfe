@@ -1,16 +1,8 @@
 import {
   mdiAccountCircle,
   mdiMonitor,
-  mdiGithub,
-  mdiLock,
-  mdiAlertCircle,
-  mdiSquareEditOutline,
   mdiTable,
   mdiViewList,
-  mdiTelevisionGuide,
-  mdiResponsive,
-  mdiPalette,
-  mdiVuejs,
 } from '@mdi/js'
 import { MenuAsideItem } from './interfaces'
 
@@ -29,6 +21,20 @@ const menuAside: MenuAsideItem[] = [
     href: '/employees',
     label: 'Employees',
     icon: mdiTable,
+  },
+  {
+    label: 'Department',
+    icon: mdiAccountCircle,
+    menu: [
+      {
+        label: 'New Department',
+        href: '/department-create',
+      },
+      {
+        label: 'Department List',
+        href:'/department-list',
+      },
+    ]
   },
   {
     href:'/payroll',
