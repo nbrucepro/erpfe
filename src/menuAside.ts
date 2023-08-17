@@ -18,13 +18,8 @@ const menuAside: MenuAsideItem[] = [
     label:'Invoice'
   },
   {
-    href: '/employees',
-    label: 'Employees',
-    icon: mdiTable,
-  },
-  {
     label: 'Department',
-    icon: mdiAccountCircle,
+    icon: mdiTable,
     menu: [
       {
         label: 'New Department',
@@ -36,6 +31,26 @@ const menuAside: MenuAsideItem[] = [
       },
     ]
   },
+  {
+    label: 'Leave Type',
+    icon: mdiTable,
+    menu: [
+      {
+        label: 'New Leave Type',
+        href: '/leave-type-create',
+      },
+      {
+        label: 'Leave Type List',
+        href:'/leave-type-list',
+      },
+    ]
+  },
+  {
+    href: '/employees',
+    label: 'Employees',
+    icon: mdiTable,
+  },
+  
   {
     href:'/payroll',
     label: 'Payroll',
