@@ -17,7 +17,7 @@ export default function Error() {
   const router = useRouter()
 
   const handleSubmit = () => {
-    router.push('/dashboard')
+    router.push('/')
   }
 
   return (
@@ -49,7 +49,7 @@ export default function Error() {
 
               <Buttons>
                 <Button type="submit" label="Login" color="info" />
-                <Button href="/dashboard" label="Home" color="info" outline />
+                <Button href="/" label="Home" color="info" outline />
               </Buttons>
             </Form>
           </Formik>
