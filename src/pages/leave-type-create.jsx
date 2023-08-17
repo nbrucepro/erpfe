@@ -1,14 +1,21 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import LayoutAuthenticated from '../layouts/Authenticated'
 import { Field, Form, Formik } from 'formik'
-import ReactQuill from 'react-quill'
-import 'react-quill/dist/quill.snow.css'
+import dynamic from 'next/dynamic'
+const DynamicQuillComponent = dynamic(() => import('react-quill'), {
+  loading: () => <p>Loading Quill editor...</p>,
+  ssr: false,
+})
 
 const LeaveTypeCreate = () => {
   const [value, setValue] = useState('')
   const [leaveTypeName, setLeaveTypeName] = useState('')
-//   const [leaveTypeDetails, setLeaveTypeDetails] = useState('')
+  //   const [leaveTypeDetails, setLeaveTypeDetails] = useState('')
+  const [shouldRenderQuill, setShouldRenderQuill] = useState(false)
 
+  useEffect(() => {
+    setShouldRenderQuill(true) // This will be executed on the client side
+  }, [])
   return (
     <div>
       <div className="max-w-7xl mx-auto py-0 bg-gray-300">
@@ -16,7 +23,7 @@ const LeaveTypeCreate = () => {
           <h1 className="text-2xl font-bold mb-6">Create Leave Type</h1>
           <Formik
             initialValues={{
-                leaveTypeName: '',
+              leaveTypeName: '',
             }}
             onSubmit={(values) => {
               // Handle form submission here
@@ -44,13 +51,15 @@ const LeaveTypeCreate = () => {
                     <label className="font-semibold" htmlFor="leaveTypeDetails">
                       LeaveType Details
                     </label>
-                    <ReactQuill
-                      value={value}
-                      onChange={setValue}
-                      className="w-full border bg-white border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                    />
+                    {shouldRenderQuill && (
+                      <DynamicQuillComponent
+                        value={value}
+                        onChange={setValue}
+                        className="w-full border bg-white border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                      />
+                    )}
                   </div>
-                  <div className='px-3 py-2'>
+                  <div className="px-3 py-2">
                     <Field type="checkbox" name="status" />
                     <label className="font-semibold" htmlFor="">
                       LeaveType Status
