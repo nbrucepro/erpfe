@@ -50,7 +50,26 @@ const menuAside: MenuAsideItem[] = [
     label: 'Employees',
     icon: mdiTable,
   },
-  
+  {
+    label:'Leave',
+    icon:mdiTable,
+    menu:[
+      {
+      label:'Leave List',
+      href:'/leave-list',
+    },{
+      label:'Leave List Pending',
+      href:'/leave-list-pending',
+    },
+      {
+      label:'Leave List Approved',
+      href:'/leave-list-approved',
+    },{
+      label:'Leave List Rejected',
+      href:'/leave-list-rejected',
+    }
+  ]
+  },
   {
     href:'/payroll',
     label: 'Payroll',
