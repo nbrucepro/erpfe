@@ -56,11 +56,11 @@ const menuAside: MenuAsideItem[] = [
     // href:'/shift/shifts',
     menu:[
       {
-        label:'Warehouses',
+        label:'Shifts',
         href:'/shift/shifts',
       },    
       {
-      label:'New Warehouse',
+      label:'Assign Shift',
       href:'/shift/shift-create',
     },
   ]
