@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import StateContext from '../context/stateContext'
 import 'react-quill/dist/quill.snow.css'
 import '../css/main.css'
+import '../css/table.css'
 
 export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode

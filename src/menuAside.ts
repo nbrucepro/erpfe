@@ -53,6 +53,7 @@ const menuAside: MenuAsideItem[] = [
   {
     label:'Leave',
     icon:mdiTable,
+    href:'/leave-list',
     menu:[
       {
       label:'Leave List',
@@ -68,6 +69,21 @@ const menuAside: MenuAsideItem[] = [
       label:'Leave List Rejected',
       href:'/leave-list-rejected',
     }
+  ]
+  },
+  {
+    label:'Stock',
+    icon:mdiTable,
+    href:'/stock/warehouses',
+    menu:[
+      {
+        label:'Warehouses',
+        href:'/stock/warehouses',
+      },    
+      {
+      label:'New Warehouse',
+      href:'/stock/warehouses-create',
+    },
   ]
   },
   {
