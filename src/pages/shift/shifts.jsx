@@ -1,9 +1,9 @@
 import { useMemo } from "react";
-import {COLUMNS} from '../../components/shared/columns'
+import {COLUMNS} from '../../components/shared/shiftColumns'
 import MOCK from '../../components/shared/MOCK.json'
 import { useTable } from "react-table";
 import LayoutAuthenticated from "../../layouts/Authenticated";
-const Warehouses = () => {
+const Shifts = () => {
 const columns = useMemo(()=>COLUMNS,[]);
 const data = useMemo(()=>MOCK,[]);
 const {
@@ -45,7 +45,7 @@ return (
 )
 
 }
-Warehouses.getLayout=function getLayout(page){
+Shifts.getLayout=function getLayout(page){
     return <LayoutAuthenticated>{page}</LayoutAuthenticated>
 }
-export default Warehouses;
+export default Shifts;

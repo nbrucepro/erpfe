@@ -49,11 +49,26 @@ const menuAside: MenuAsideItem[] = [
     href: '/employees',
     label: 'Employees',
     icon: mdiTable,
+  },  
+  {
+    label:'Shifts',
+    icon:mdiTable,
+    // href:'/shift/shifts',
+    menu:[
+      {
+        label:'Warehouses',
+        href:'/shift/shifts',
+      },    
+      {
+      label:'New Warehouse',
+      href:'/shift/shift-create',
+    },
+  ]
   },
   {
     label:'Leave',
     icon:mdiTable,
-    href:'/leave-list',
+    // href:'/leave-list',
     menu:[
       {
       label:'Leave List',
@@ -74,7 +89,7 @@ const menuAside: MenuAsideItem[] = [
   {
     label:'Stock',
     icon:mdiTable,
-    href:'/stock/warehouses',
+    // href:'/stock/warehouses',
     menu:[
       {
         label:'Warehouses',
