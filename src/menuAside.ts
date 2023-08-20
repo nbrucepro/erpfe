@@ -51,6 +51,11 @@ const menuAside: MenuAsideItem[] = [
     icon: mdiTable,
   },  
   {
+    href: '/tasks',
+    label: 'Tasks',
+    icon: mdiTable,
+  },  
+  {
     label:'Shifts',
     icon:mdiTable,
     // href:'/shift/shifts',
