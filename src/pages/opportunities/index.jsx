@@ -9,7 +9,7 @@ const DynamicQuillComponent = dynamic(() => import('react-quill'), {
   loading: () => <p>Loading Quill editor...</p>,
   ssr: false,
 })
-const ProjectOpportunitiess = () => {
+const Opportunities = () => {
   const [active, setActive] = useState('logs')
   const [value, setValue] = useState('')
 
@@ -25,7 +25,7 @@ const ProjectOpportunitiess = () => {
         <li
           className={`${
             active === 'logs' && 'bg-gray-300'
-          } flex justify-center items-center w-32 cursor-pointer`}
+          } flex justify-center items-center w-48 cursor-pointer`}
         >
           <a className="flex flex-col text-center p-4" onClick={() => setActive('logs')}>
             Opportunities Logs
@@ -33,11 +33,11 @@ const ProjectOpportunitiess = () => {
         </li>
         <li
           className={`${
-            active === 'newproject' && 'bg-gray-300 p-4'
-          } w-32 flex justify-center items-center cursor-pointer`}
+            active === 'newopportunity' && 'bg-gray-300 p-4'
+          } w-48 flex justify-center items-center cursor-pointer`}
         >
-          <a className="flex flex-col text-center" onClick={() => setActive('newproject')}>
-            New Project
+          <a className="flex flex-col text-center" onClick={() => setActive('newopportunity')}>
+            New Opportunity
           </a>
         </li>
       </ul>
@@ -46,7 +46,7 @@ const ProjectOpportunitiess = () => {
       ) : (
         <div className="max-w-6xl py-0 bg-gray-300">
           <div className="bg-gray-300 rounded-full shadow-lg p-8">
-            <h1 className="text-2xl font-semibold mb-6">New Project</h1>
+            <h1 className="text-2xl font-semibold mb-6">New Opportunity</h1>
             <Formik
               initialValues={{}}
               onSubmit={(values) => {
@@ -58,160 +58,134 @@ const ProjectOpportunitiess = () => {
                 <Form>
                   <div className="grid md:grid-cols-2 gap-6 grid-cols-1 py-5">
                     <div>
-                      <label className="font-semibold" htmlFor="projectName">
-                        Project Name
+                      <label className="font-semibold" htmlFor="opportunityName">
+                        Opportunity Name
                       </label>
                       <Field
-                        id="projectName"
-                        name="projectName"
-                        placeholder="Enter Project Name"
+                        id="opportunityName"
+                        name="opportunityName"
+                        placeholder="Enter Opportunity Name"
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                         required
                       />
                     </div>
                     <div>
-                      <label className="font-semibold" htmlFor="projectCategory">
-                        Project Category
+                      <label className="font-semibold" htmlFor="probabilityOfWinning">
+                        Probability Of Winning
                       </label>
                       <Field
-                        id="projectCategory"
-                        name="projectCategory"
-                        placeholder="Enter Project Category"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="projectClient">
-                        Project Client
-                      </label>
-                      <Field
-                        id="projectClient"
-                        name="projectClient"
-                        placeholder="Enter Project Client"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="progress">
-                        Progress
-                      </label>
-                      <Field
-                        id="progress"
-                        name="progress"
-                        placeholder="Enter Progress"
+                        id="probabilityOfWinning"
+                        name="probabilityOfWinning"
+                        placeholder="Enter Probability Of Winning"
                         type="Number"
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                         required
                       />
                     </div>
                     <div>
-                      <label className="font-semibold" htmlFor="startDate">
-                        Start Date
+                      <label className="font-semibold" htmlFor="currentState">
+                      Current State
                       </label>
                       <Field
-                        id="startDate"
-                        name="startDate"
-                        placeholder="Enter Start Date"
+                        id="currentState"
+                        name="currentState"
+                        placeholder="Enter Current State"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="font-semibold" htmlFor="expectedRevenue">
+                        Expected Revenue
+                      </label>
+                      <Field
+                        id="expectedRevenue"
+                        name="expectedRevenue"
+                        placeholder="Enter Expected Revenue"
+                        type="Number"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="font-semibold" htmlFor="nextAction">
+                        Next Action
+                      </label>
+                      <Field
+                        id="nextAction"
+                        name="nextAction"
+                        placeholder="Enter Next Action"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="font-semibold" htmlFor="responsible">
+                        Responsible Person
+                      </label>
+                      <Field
+                        id="responsible"
+                        name="responsible"
+                        placeholder="Enter Responsible Person"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="font-semibold" htmlFor="stages">
+                        stages
+                      </label>
+                      <Field
+                        id="stages"
+                        name="stages"
+                        placeholder="Enter stages"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="font-semibold" htmlFor="forecastCloseDate">
+                      Forecast Close Date
+                      </label>
+                      <Field
+                        id="forecastCloseDate"
+                        name="forecastCloseDate"
+                        placeholder="Forecast Close Date"
+                        type="Date"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="font-semibold" htmlFor="addNewLink">
+                        Add New Link
+                      </label>
+                      <Field
+                        id="addNewLink"
+                        name="addNewLink"
+                        placeholder="Add New Link"
+                        type="Number"
+                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="font-semibold" htmlFor="nextActionDate">
+                        next Action Date
+                      </label>
+                      <Field
+                        id="nextActionDate"
+                        name="nextActionDate"
+                        placeholder="Enter next Action Date"
                         type="Date"
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                         required
                       />
                     </div>
                     <div>
-                      <label className="font-semibold" htmlFor="endDate">
-                        End Date
-                      </label>
-                      <Field
-                        id="endDate"
-                        name="endDate"
-                        placeholder="Enter End Date"
-                        type="Date"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="billingType">
-                        Billing Type
-                      </label>
-                      <Field
-                        id="billingType"
-                        name="billingType"
-                        placeholder="Enter Billing Type"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="fixedPrice">
-                        Fixed Price
-                      </label>
-                      <Field
-                        id="fixedPrice"
-                        name="fixedPrice"
-                        placeholder="Enter Fixed Price"
-                        type="Number"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="hourlyRate">
-                        Hourly Rate
-                      </label>
-                      <Field
-                        id="hourlyRate"
-                        name="hourlyRate"
-                        placeholder="Enter Hourly Rate"
-                        type="Number"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="estimateHours">
-                        Estimated Hours
-                      </label>
-                      <Field
-                        id="estimateHours"
-                        name="estimateHours"
-                        placeholder="Enter Estimated Hours"
-                        type="Number"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="status">
-                        status
-                      </label>
-                      <Field
-                        id="status"
-                        name="status"
-                        placeholder="Enter status"
-                        type="Number"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="demoUrl">
-                        Demo Url
-                      </label>
-                      <Field
-                        id="demoUrl"
-                        name="demoUrl"
-                        placeholder="Enter Demo Url"
-                        type="Number"
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-semibold" htmlFor="projectDetails">
-                        Project Details
+                      <label className="font-semibold" htmlFor="shortNote">
+                        Short Note
                       </label>
                       {shouldRenderQuill && (
                         <DynamicQuillComponent
@@ -226,7 +200,7 @@ const ProjectOpportunitiess = () => {
                       type="submit"
                       className="bg-indigo-500 text-white rounded-md px-4 py-2 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
                     >
-                      Create Project
+                      Create Opportunity
                     </button>
                   </div>
                 </Form>
