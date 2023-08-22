@@ -44,7 +44,7 @@ const Goals = () => {
       {active === 'logs' ? (
         <GoalsTable />
       ) : (
-        <div className="max-w-6xl py-0 bg-gray-300">
+        <div className="py-0 bg-gray-300">
           <div className="bg-gray-300 rounded-full shadow-lg p-8">
             <h1 className="text-2xl font-semibold mb-6">New Goal</h1>
             <Formik
@@ -71,7 +71,7 @@ const Goals = () => {
                     </div>
                     <div>
                       <label className="font-semibold" htmlFor="goalType">
-                      Goal Type
+                        Goal Type
                       </label>
                       <Field
                         id="goalType"
@@ -106,7 +106,7 @@ const Goals = () => {
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                         required
                       />
-                    </div>          
+                    </div>
                     <div>
                       <label className="font-semibold" htmlFor="targetAchievement">
                         Target Achievement
@@ -118,11 +118,11 @@ const Goals = () => {
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                         required
                       />
-                    </div>          
-                  
-                  <div>
+                    </div>
+
+                    <div>
                       <label className="font-semibold" htmlFor="description">
-                      Description
+                        Description
                       </label>
                       {shouldRenderQuill && (
                         <DynamicQuillComponent
@@ -131,7 +131,7 @@ const Goals = () => {
                         />
                       )}
                     </div>
-                    </div>
+                  </div>
                   <div className="flex justify-center mt-6">
                     <button
                       type="submit"

@@ -44,7 +44,7 @@ const Projects = () => {
       {active === 'logs' ? (
         <ProjectsTable />
       ) : (
-        <div className="max-w-6xl py-0 bg-gray-300">
+        <div className="py-0 bg-gray-300">
           <div className="bg-gray-300 rounded-full shadow-lg p-8">
             <h1 className="text-2xl font-semibold mb-6">New Project</h1>
             <Formik
@@ -216,7 +216,7 @@ const Projects = () => {
                       {shouldRenderQuill && (
                         <DynamicQuillComponent
                           onChange={setValue}
-                          className="w-[200%] block border bg-white border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
+                          className="w-full md:w-[200%] block border bg-white border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-indigo-500"
                         />
                       )}
                     </div>

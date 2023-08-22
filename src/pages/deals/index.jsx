@@ -44,7 +44,7 @@ const Deals = () => {
       {active === 'logs' ? (
         <DealsTable />
       ) : (
-        <div className="max-w-6xl py-0 bg-gray-300">
+        <div className="py-0 bg-gray-300">
           <div className="bg-gray-300 rounded-full shadow-lg p-8">
             <h1 className="text-2xl font-semibold mb-6">New Deal</h1>
             <Formik
