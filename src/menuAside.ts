@@ -81,6 +81,11 @@ const menuAside: MenuAsideItem[] = [
     icon: mdiTable,
   },  
   {
+    href: '/goals',
+    label: 'Goals',
+    icon: mdiTable,
+  }, 
+  {
     label:'Shifts',
     icon:mdiTable,
     // href:'/shift/shifts',
@@ -135,7 +140,7 @@ const menuAside: MenuAsideItem[] = [
     href:'/payroll',
     label: 'Payroll',
     icon: mdiViewList,
-  },
+  },  
    {
     // href: '/dashboard',
     label: 'Profile',
