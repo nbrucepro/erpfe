@@ -81,8 +81,8 @@ function Center() {
                                 <div onClick={() => { setIsDropdown((state) => !state) }} className=' cursor-pointer ml-3 '>
                                     {
                                         <>
-                                        <motion.img src={'../assets/icon-arrow-down.svg'} animate={isDropdown ? { transition, rotate: -180 } : { transition, rotate: 0 }} />
-                                        <Image priority src={'../assets/logo.svg'} width={40} height={40} alt='testing image'/>
+                                        <motion.img src={'assets/icon-arrow-down.svg'} animate={isDropdown ? { transition, rotate: -180 } : { transition, rotate: 0 }} />
+                                        <Image priority src={'assets/logo.svg'} width={40} height={40} alt='testing image'/>
                                         </>
                                     }
                                 </div>

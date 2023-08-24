@@ -1,6 +1,6 @@
 import React from 'react'
 import PaidStatus from './PaidStatus'
-import rightArrow from '../assets/icon-arrow-right.svg'
+// import rightArrow from 'assets/icon-arrow-right.svg'
 import Link from 'next/link'
 
 function InvoiceCard({ invoice }) {
@@ -38,7 +38,8 @@ function InvoiceCard({ invoice }) {
 
                     <PaidStatus type={invoice.status} />
 
-                    <img src={rightArrow} className=' ml-4' />
+                    {/* <img src={rightArrow} alt="rightArrow" className=' ml-4' /> */}
+                    <svg className='ml-4' width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
 
 
                 </div>
