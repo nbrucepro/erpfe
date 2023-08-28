@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import styleReducer from './styleSlice'
 import mainReducer from './mainSlice'
+import invoiceSlice from '../redux/invoiceSlice'
 
 export const store = configureStore({
   reducer: {
     style: styleReducer,
     main: mainReducer,
+    invoices: invoiceSlice.reducer
   },
 })
 

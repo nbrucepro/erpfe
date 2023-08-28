@@ -51,7 +51,7 @@ function InvoiceCard({ invoice }) {
 
                 <div className=' flex flex-col'>
                     <h2 className=' dark:text-white '>
-                        <span className=' text-[#7e88c3]'>
+                        <span className=' text-[#7e88c3]'>Target-List
                             #
                         </span>
                         {invoice.id}

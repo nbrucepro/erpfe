@@ -4,12 +4,12 @@ import type { AppProps } from 'next/app'
 import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { store } from '../stores/store'
 import { Provider } from 'react-redux'
 import StateContext from '../context/stateContext'
 import 'react-quill/dist/quill.snow.css'
 import '../css/main.css'
 import '../css/table.css'
+import { store } from '../stores/store'
 
 export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode

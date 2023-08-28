@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { useTable } from 'react-table'
 import  MOCK_DATA  from './MOCK_DATA.json'
 import { COLUMNS } from './columns'
-const ContractsTable = () => {
+const TargetListTable = () => {
   const columns = useMemo(() => COLUMNS, [])
   const data = useMemo(() => MOCK_DATA, [])
 
@@ -41,4 +41,4 @@ const ContractsTable = () => {
     </>
   )
 }
-export default ContractsTable
+export default TargetListTable

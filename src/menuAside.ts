@@ -13,7 +13,7 @@ const menuAside: MenuAsideItem[] = [
     label: 'Dashboard',
   },
   {
-    href:'/invoic',
+    href:'/invoica',
     icon:mdiAccountCircle,
     label:'Invoice'
   },
@@ -103,6 +103,11 @@ const menuAside: MenuAsideItem[] = [
   {
     href: '/contracts',
     label: 'Contracts',
+    icon: mdiTable,
+  }, 
+  {
+    href: '/targetList',
+    label: 'Target List',
     icon: mdiTable,
   }, 
   {
