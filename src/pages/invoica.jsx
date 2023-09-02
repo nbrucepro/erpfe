@@ -14,7 +14,7 @@ function Center() {
     // const location = useLocation()
     const controls = useAnimation();
     const dispatch = useDispatch()
-    const filter = ['paid', 'pending', 'draft']
+    const filter = ['paid', 'pending', 'draft', 'highest' , 'lowest' ]
     const [isDropdown, setIsDropdown] = useState(false)
     const [openCreateInvoice, setOpenCreateInvoice] = useState(false)
 

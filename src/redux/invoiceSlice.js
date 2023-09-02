@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import moment from "moment";
 import { useState } from "react";
 import data from "../assets/data/data.json";
+import highdata from "../assets/data/highdata.json";
+import lowdata from "../assets/data/lowdata.json";
 import getForwardDate from "../functions/forwardDate";
 import generateID from "../functions/generateId";
 
@@ -27,6 +29,12 @@ const invoiceSlice = createSlice({
         });
         console.log(filteredData);
         state.filteredInvoice = filteredData;
+        if(action.payload.status === "lowest"){
+          state.filteredInvoice = lowdata;
+        } 
+        if(action.payload.status === "highest"){
+          state.filteredInvoice = highdata;
+        } 
       }
     },
     getInvoiceById: (state, action) => {
