@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@heroicons/react": "^2.0.17",
     "@mdi/js": "^7.0.96",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
@@ -34,8 +35,10 @@
     "react-loader-spinner": "^5.1.2",
     "react-quill": "^2.0.0",
     "react-redux": "^8.1.1",
+    "react-router-dom": "^6.15.0",
     "react-table": "^7.8.0",
     "react-tabs": "^3.2.3",
+    "react-to-pdf": "^0.0.14",
     "react-to-print": "^2.14.0",
     "react-toastify": "^9.0.3",
     "swr": "^2.2.0",

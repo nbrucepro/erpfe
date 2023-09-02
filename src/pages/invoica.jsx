@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import invoiceSlice from '../redux/invoiceSlice'
 import LayoutAuthenticated from '../layouts/Authenticated'
 import Image from 'next/image'
-// import CreateInvoice from './CreateInvoice'
+import CreateInvoice from '../components/invoice/CreateInvoice'
 // import { useLocation } from 'react-router-dom'
 
 function Center() {
@@ -129,9 +129,9 @@ function Center() {
 
             </div>
             <AnimatePresence>
-                {/* {openCreateInvoice &&
+                {openCreateInvoice &&
                     <CreateInvoice openCreateInvoice={openCreateInvoice} setOpenCreateInvoice={setOpenCreateInvoice} />
-                } */}
+                }
             </AnimatePresence>
         </div>
     );
